@@ -9,23 +9,14 @@
       <div class="container">
         <header>
           <div class="left-header">
-            <nav class="navbar">
-              <ul>
-                {% for page in site.pages %}
-                {% if page.title %}
-                <li>
-                  <a href="{{ site.baseurl }}/{{ page.title }}">{{ page.title }}</a>
-                </li>
-                {% endif %}
-                {% endfor %}
-              </ul>
-            </nav>
+            {% include navigation.html %}
           </div>
           <div class="right-header">
             <h2>visualalgo</h2>
             <form>
               <label for="input">Enter your code to join</label>
               <input type="text" name="" id="input" placeholder="Joining">
+              <button>Join</button>
             </form>
           </div>
         </header>

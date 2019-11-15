@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <ul>
+        {% assign navigation = site.pages | sort:"order" %}
+        {% for page in navigation %}
+        {% if page.title %}
+        <li>
+            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <ul>
+        <li>
+            <a href="#">Login</a>
+        </li>
+        <li>
+            <a href="#">Sign in</a>
+        </li>
+    </ul>
+</nav>

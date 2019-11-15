@@ -3,6 +3,15 @@ ul {
     display: flex;
 }
 
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-light-bg-color);
+    box-shadow: 0 0 7px #00000022;
+    transform: translateY(-2em);
+    opacity: 0;
+}
+
 nav.navbar ul li a {
     text-decoration: none;
     padding: 0.6em 0.6em;
@@ -18,14 +27,7 @@ nav.navbar ul li {
     padding: 0.6em 0.6em;
 }
 
-nav.navbar ul li:nth-child(1) { animation-delay: 0.2s; }
-nav.navbar ul li:nth-child(2) { animation-delay: 0.4s; }
-
 nav.navbar ul li a:hover {
     background-color: var(--text-dark-bg-color);
     color: var(--text-light-color);
-}
-
-nav.navbar ul {
-    background-color: var(--text-light-bg-color);
 }
