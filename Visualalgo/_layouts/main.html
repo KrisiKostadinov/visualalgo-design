@@ -7,17 +7,28 @@
   </head>
   <body>
       <div class="container">
-          <nav class="navbar">
+        <header>
+          <div class="left-header">
+            <nav class="navbar">
               <ul>
-                  {% for page in site.pages %}
-                    {% if page.title %}
-                        <li>
-                            <a href="{{ site.baseurl }}/{{ page.title }}">{{ page.title }}</a>
-                        </li>
-                    {% endif %}
-                  {% endfor %}
+                {% for page in site.pages %}
+                {% if page.title %}
+                <li>
+                  <a href="{{ site.baseurl }}/{{ page.title }}">{{ page.title }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
               </ul>
-          </nav>
+            </nav>
+          </div>
+          <div class="right-header">
+            <h2>visualalgo</h2>
+            <form>
+              <label for="input">Enter your code to join</label>
+              <input type="text" name="" id="input" placeholder="Joining">
+            </form>
+          </div>
+        </header>
           {{ content }}
     </div>
   </body>

@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .left-header {
+    width: calc(100% - 27%);
+}
+
+header .right-header {
+    width: 27%;
+    height: 70ch;
+    background-color: #3895ff;
+}
+
+header .right-header h2 {
+    width: fit-content;
+    margin: 2em auto 4em auto;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 7px #000;
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+header .right-header form {
+    text-align: center;
+    color: #fff;
+    padding: 0 2em;
+}
+
+header .right-header form input {
+    width: 100%;
+    padding: 1em;
+    border-radius: 2em;
+    border: 2px solid #dbdbdb;
+    margin-top: 1em;
+    box-shadow: 0 2px 7px #22222299;
+    outline: none;
+}
