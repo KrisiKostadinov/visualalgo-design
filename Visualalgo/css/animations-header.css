@@ -16,3 +16,44 @@ header .right-header {
         transform: translateX(0);
     }
 }
+
+header .main-header h1 {
+    animation: show-in-top 1s forwards ease-in-out;
+    animation-delay: 2s;
+}
+
+header .main-header p {
+    animation: show-in-top 1s forwards ease-in-out;
+    animation-delay: 3s;
+}
+
+@keyframes show-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-1em);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(0.2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header .main-header button:last-child {
+    animation: movedAnim 2s infinite ease-out;
+}
+
+@keyframes movedAnim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

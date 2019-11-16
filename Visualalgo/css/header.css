@@ -115,6 +115,8 @@ header form button:hover {
 
 .main-header h1,
 .main-header p {
+    opacity: 0;
+    transform: translateX(20em);
     text-shadow: 0 0 7px var(--text-dark-bg-color);;
 }
 
