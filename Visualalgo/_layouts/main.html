@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   </head>
   <body>
       <div class="container">
@@ -11,13 +12,15 @@
           <div class="left-header">
             {% include navigation.html %}
           </div>
+          
           <div class="right-header">
-            <h2>visualalgo</h2>
-            <form>
-              <label for="input">Enter your code to join</label>
-              <input type="text" name="" id="input" placeholder="Joining">
-              <button>Join</button>
-            </form>
+            {% include right-header.html %}
+          </div>
+          <div class="main-header">
+            <h1>Easy sliding for everybody</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, molestias.</p>
+            <button>Get started</button>
+            <button><i class="fas fa-arrow-down"></i></button>
           </div>
         </header>
           {{ content }}

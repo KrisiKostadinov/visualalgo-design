@@ -6,7 +6,7 @@ ul {
 nav.navbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--text-light-bg-color);
+    background-color: var(--dark-bg-color);
     box-shadow: 0 0 7px #00000022;
     transform: translateY(-2em);
     opacity: 0;
@@ -19,15 +19,15 @@ nav.navbar ul li a {
     transition: background-color 0.2s ease-in;
     background-color: var(--text-light-bg-color);
     border-radius: 0.2em;
+    color: var(--text-light-color);
+}
+
+nav.navbar ul li a:hover {
+    background-color: var(--text-dark-bg-color);
 }
 
 nav.navbar ul li {
     opacity: 0;
     transform: translateY(-2em);
     padding: 0.6em 0.6em;
-}
-
-nav.navbar ul li a:hover {
-    background-color: var(--text-dark-bg-color);
-    color: var(--text-light-color);
 }

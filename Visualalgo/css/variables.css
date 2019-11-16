@@ -2,6 +2,8 @@
     --font-family-heading: Verdana, Geneva, Tahoma, sans-serif;
     --font-family-text: Arial, sans-serif;
     --text-light-color: #fff;
-    --text-light-bg-color: #ffffff77;
+    --light-bg-color: #3895ff67;
     --text-dark-bg-color: #00000099;
+    --light-bg-color: #3895ff67;
+    --dark-bg-color: #0077ff99;
 }
