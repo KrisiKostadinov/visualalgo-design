@@ -42,7 +42,7 @@ header .main-header p {
     }
 }
 
-header .main-header button:last-child {
+header .main-header a:last-child {
     animation: movedAnim 2s infinite ease-out;
 }
 

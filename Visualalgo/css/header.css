@@ -82,23 +82,23 @@ header form button:hover {
     border: 2px solid var(--text-light-color);;
 }
 
-.social-links {
+header .social-links {
     margin: 2em 0;
     justify-content: center;
 }
 
-.social-links li a i {
+header .social-links li a i {
     padding: 0.7em 1em;
     color: var(--text-light-color);;
     transition: background-color 0.2s ease-in-out;
     border-radius: 2em;
 }
 
-.social-links li a {
+header .social-links li a {
     margin: 0 0.2em;
 }
 
-.social-links li a i:hover {
+header .social-links li a i:hover {
     background-color: var(--text-light-color);;
     color: #3895ff;
     box-shadow: 0 2px 7px var(--text-dark-bg-color);;
@@ -124,7 +124,7 @@ header form button:hover {
     margin: 1em 0;
 }
 
-.main-header button {
+.main-header a {
     width: fit-content;
     margin: 2em auto;
     padding: 1.7em 2em;
@@ -138,13 +138,13 @@ header form button:hover {
     text-transform: uppercase;
 }
 
-.main-header button:last-child {
+.main-header a:last-child {
     font-size: 2em;
     background-color: transparent;
     padding: 0.2em;
 }
 
-.main-header button:hover {
+.main-header a:hover {
     box-shadow: 0 2px 2px var(--text-dark-bg-color);;
     background-color: var(--text-light-color);;
     color: #3895ff;

@@ -1,9 +1,9 @@
-ul {
+header ul {
     list-style-type: none;
     display: flex;
 }
 
-nav.navbar {
+header nav.navbar {
     display: flex;
     justify-content: space-between;
     background-color: var(--dark-bg-color);
@@ -12,7 +12,7 @@ nav.navbar {
     opacity: 0;
 }
 
-nav.navbar ul li a {
+header nav.navbar ul li a {
     text-decoration: none;
     padding: 0.6em 0.6em;
     display: block;
@@ -22,11 +22,11 @@ nav.navbar ul li a {
     color: var(--text-light-color);
 }
 
-nav.navbar ul li a:hover {
+header nav.navbar ul li a:hover {
     background-color: var(--text-dark-bg-color);
 }
 
-nav.navbar ul li {
+header nav.navbar ul li {
     opacity: 0;
     transform: translateY(-2em);
     padding: 0.6em 0.6em;
