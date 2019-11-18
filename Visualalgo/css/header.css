@@ -1,21 +1,23 @@
 header {
-    display: flex;
-    justify-content: space-between;
     background-image: linear-gradient(to bottom, var(--dark-bg-color), var(--dark-bg-color)),
     url('../images/background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
 header .left-header {
-    width: calc(100% - 27%);
+    width: 100%;
 }
 
 header .right-header {
-    width: 27%;
-    height: 70ch;
     background-color: var(--dark-bg-color);
-    box-shadow: 0 0 7px var(--text-dark-bg-color);;
+    box-shadow: 0 0 7px var(--text-dark-bg-color);
 }
 
 header .right-header h2 {
@@ -105,12 +107,12 @@ header .social-links li a i:hover {
 }
 
 .main-header {
-    position: absolute;
-    left: 10%;
-    top: 27%;
+    width: 70%;
+    text-align: center;
     color: var(--text-light-color);
     display: flex;
     flex-direction: column;
+    margin-top: 2em;
 }
 
 .main-header h1,
@@ -121,7 +123,7 @@ header .social-links li a i:hover {
 }
 
 .main-header p {
-    margin: 1em 0;
+    margin: 2em 0;
 }
 
 .main-header a {
@@ -130,7 +132,7 @@ header .social-links li a i:hover {
     padding: 1.7em 2em;
     border: none;
     border-radius: 4em;
-    color: var(--text-light-color);;
+    color: var(--text-light-color);
     background-color: var(--dark-bg-color);
     transition: box-shadow 1s ease-in-out, background-color 1s ease-out;
     cursor: pointer;
@@ -147,5 +149,15 @@ header .social-links li a i:hover {
 .main-header a:hover {
     box-shadow: 0 2px 2px var(--text-dark-bg-color);;
     background-color: var(--text-light-color);;
-    color: #3895ff;
+    color: var(--dark-bg-color);
+}
+
+@media only screen and (max-width: 770px) {
+    header .wrapper {
+        display: block;
+    }
+
+    .main-header {
+        width: 100%;
+    }
 }

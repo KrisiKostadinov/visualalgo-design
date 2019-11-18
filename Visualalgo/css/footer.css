@@ -1,12 +1,14 @@
 footer {
     background-color: var(--black-bg-color);
-    padding: 2em 7em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: var(--text-light-color);
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer .social-links {
@@ -37,4 +39,14 @@ footer .social-links .links li a i {
 footer .social-links .links li a i:hover {
     background-color: var(--dark-bg-color);
     transform: scale(1.07);
+}
+
+@media only screen and (max-width: 600px) {
+    footer .wrapper {
+        flex-direction: column-reverse;
+    }
+
+    footer .social-links {
+        margin: 2em 0;
+    }
 }
