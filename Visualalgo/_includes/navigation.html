@@ -11,10 +11,18 @@
     </ul>
     <ul>
         <li>
-            <a href="#">Login</a>
+            <a id="login-btn" href="#">Login</a>
         </li>
         <li>
             <a href="#">Sign in</a>
         </li>
     </ul>
 </nav>
+
+<script>
+    $(document).ready(function() {
+        $('#login-btn').click(function() {
+            $('.login').fadeIn(1000);
+        });
+    });
+</script>

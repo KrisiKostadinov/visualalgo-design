@@ -2,10 +2,13 @@
     --font-family-heading: Verdana, Geneva, Tahoma, sans-serif;
     --font-family-text: Arial, sans-serif;
     --text-light-color: #fff;
-    --light-bg-color: #3895ff67;
     --text-dark-bg-color: #00000099;
-    --light-bg-color: #3895ff67;
+    --light-bg-color: #ffffff;
     --dark-bg-color: #0077ff99;
     --black-bg-color: #222;
     --gray-color: #ccc;
+    --text-dark-color: #3895ff;
+    --light-gray-color: #f0f0f0;
+    --dark-gray-color: #c0c0c0;
+    --close-btn-color: #0077ff;
 }
