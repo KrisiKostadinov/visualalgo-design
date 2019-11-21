@@ -23,7 +23,7 @@ header nav.navbar ul li a {
 }
 
 header nav.navbar ul li a:hover {
-    background-color: var(--text-dark-bg-color);
+    background-color: var(--text-dark-color);
 }
 
 header nav.navbar ul li {

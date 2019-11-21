@@ -1,0 +1,13 @@
+<nav>
+    <a href="{{ site.baseurl }}/"><h2><span>Blog</span><span>Posts</span></h2></a>
+    <ul>
+        {% assign navigation = site.pages | sort:"order" %}
+        {% for current_page in navigation %}
+            {% if current_page.title %}
+                <li class="{% if current_page.url == page.url %}page-item{% endif %}">
+                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

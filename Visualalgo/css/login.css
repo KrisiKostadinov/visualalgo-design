@@ -88,7 +88,7 @@
     border: none;
     color: var(--light-bg-color);
     background-color: var(--close-btn-color);
-    box-shadow: 0 0 7px var(--text-dark-bg-color);
+    box-shadow: 0 0 7px var(--text-dark-color);
     cursor: pointer;
     transition: transform 0.2s ease-in;
     outline: none;
