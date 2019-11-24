@@ -1,3 +1,12 @@
+//SASS Variables
+
+$blog-post-title-color: #86cfff;
+$blog-post-content-color-hover: #101010;
+$blog-post-box-shadow-color: #a0a0a0;
+$blog-post-content-color: #757575;
+
+//CSS Variables
+
 :root {
     --font-family-heading: Verdana, Geneva, Tahoma, sans-serif;
     --font-family-text: Arial, sans-serif;
@@ -11,6 +20,4 @@
     --light-gray-color: #f0f0f0;
     --dark-gray-color: #c0c0c0;
     --close-btn-color: #0077ff;
-    --blog-post-title-color: #86cfff;
-    --blog-post-content-color: #202020;
 }

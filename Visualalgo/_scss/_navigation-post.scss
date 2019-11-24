@@ -1,3 +1,13 @@
+.page-item {
+    background-color: var(--dark-bg-color);
+    border-radius: 2em;
+}
+
+.page-item a {
+    color: var(--text-light-color);
+    font-weight: bold;
+}
+
 nav {
     display: flex;
     justify-content: space-around;

@@ -1,36 +1,57 @@
-main section {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 2em;
-}
+main {
+    section {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 2em;
+        
+        article {
+            width: calc(50% - 2em);
+            border-top: none;
+            padding: 1em;
+            margin: 1em;
+            box-shadow: 0 0 7px $blog-post-box-shadow-color;
+            transition: transform 0.7s ease-in;
+            
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 px $blog-post-box-shadow-color;
+            }
 
-main section article {
-    width: 50%;
-    border-top: none;
-    padding: 1em;
-    margin: 1em 0;
-}
+            h4 {
+                text-align: center;
+            }
 
-main section article h4 {
-    text-align: center;
-}
+            a {
+                color: $blog-post-title-color;
+                h2 {
+                    padding-left: 0;
+                    
+                    @include bp (mobile) {
+                        text-align: center;
+                    }
+                }
+            }
 
-main section article a h2 {
-    padding-left: 0;
-}
+            @include bp (mobile) {
+                width: 100%;
+            }
 
-main section article img {
-    width: 100%;
-    height: auto;
-}
-
-main section article a {
-    color: var(--blog-post-title-color);
-}
-
-main section article p {
-    color: var(--blog-post-content-color);
+            p {
+                color: $blog-post-content-color;
+                transition: color 0.7s ease-in;
+            }
+    
+            img {
+                width: 100%;
+                height: auto;
+            }
+            
+            &:hover > p {
+                color: $blog-post-content-color-hover;
+            }
+        }
+    }
 }
