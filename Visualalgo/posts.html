@@ -1,15 +1,23 @@
 ---
-layout: post
+layout: main
 permalink: /posts
 title: Blog
 ---
 
-<h2>Blog posts</h2>
-
-<ul>
+<section class="posts">
     {% for post in site.posts %}
-        <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </li>
+        <article class="post">
+            <a href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+            {% if post.imgurl %}
+                <img src="{{ post.imgurl}}" alt="">
+            {% else %}
+                <h4>No photo</h4>
+            {% endif %}
+            {% if post.description %}
+                <p>{{ post.description }}</p>
+            {% else %}
+                <h4>No description</h4>
+            {% endif %}
+        </article>
     {% endfor %}
-</ul>
+</section>
