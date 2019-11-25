@@ -1,11 +1,12 @@
-body {
+.main-about {
     background-color: $contacts-body-color;
+    padding: 2em;
 }
 
 .contacts-form {
     background-color: $contacts-container-color;
     width: 90%;
-    margin: 2em auto;
+    margin: 0 auto;
 
     .content {
         width: 90%;

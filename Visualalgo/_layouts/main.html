@@ -27,9 +27,15 @@
             {% endif %}
           </div>
         </header>
-        <div id="main">
-          {{ content }}
-        </div>
+        {% if page.title == 'Contacts' %}
+          <div class="main main-about">
+            {{ content }}
+          </div>
+          {% else %}
+            <div id="main" class="main">
+              {{ content }}
+            </div>
+        {% endif %}
         <footer>
           {% include footer.html %}
         </footer>

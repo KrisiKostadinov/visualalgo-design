@@ -1,9 +1,19 @@
+.left-header label {
+    position: absolute;
+    right: 0;
+    padding: 1em 0.5em;
+    font-size: 2em;
+    background-color: var(--text-light-color);
+    margin: 1em;
+    border-radius: 2em;
+    z-index: 10;
+}
+
 header ul {
-    list-style-type: none;
     display: flex;
 }
 
-header nav.navbar {
+.left-header nav.navbar {
     display: flex;
     justify-content: space-between;
     background-color: var(--dark-bg-color);
@@ -12,7 +22,32 @@ header nav.navbar {
     opacity: 0;
 }
 
-header nav.navbar ul li a {
+.left-header input[type=checkbox] {
+    display: none;
+}
+
+@include bp (desktop) {
+    .left-header label {
+        display: none;
+    }
+}
+
+@include bp (mobile) {
+    .left-header input:checked ~ nav {
+        display: block;
+
+        ul {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .left-header nav.navbar {
+        display: none;
+    }
+}
+
+.left-header nav.navbar ul li a {
     text-decoration: none;
     padding: 0.6em 0.6em;
     display: block;
@@ -20,13 +55,17 @@ header nav.navbar ul li a {
     background-color: var(--text-light-bg-color);
     border-radius: 0.2em;
     color: var(--text-light-color);
+
+    @include bp (mobile) {
+        font-size: 2em;
+    }
 }
 
-header nav.navbar ul li a:hover {
+.left-header nav.navbar ul li a:hover {
     background-color: var(--text-dark-color);
 }
 
-header nav.navbar ul li {
+.left-header nav.navbar ul li {
     opacity: 0;
     transform: translateY(-2em);
     padding: 0.6em 0.6em;

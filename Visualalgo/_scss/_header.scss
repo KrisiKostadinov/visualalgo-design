@@ -9,6 +9,10 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
     padding: 0;
+
+    @include bp (mobile) {
+        flex-direction: column;
+    }
 }
 
 header .left-header {
@@ -113,17 +117,22 @@ header .social-links li a i:hover {
     display: flex;
     flex-direction: column;
     margin-top: 2em;
-}
+    
+    @include bp (mobile) {
+        width: 100%;
+    }
 
-.main-header h1,
-.main-header p {
-    opacity: 0;
-    transform: translateX(20em);
-    text-shadow: 0 0 7px var(--text-dark-color);;
-}
+    h1, p {
+        opacity: 0;
+        transform: translateX(20em);
+        text-shadow: 0 0 7px var(--text-dark-color);
+    }
 
-.main-header p {
-    margin: 2em 0;
+    p {
+        @include bp (mobile) {
+            font-size: 2em;
+        }
+    }
 }
 
 .main-header a {
