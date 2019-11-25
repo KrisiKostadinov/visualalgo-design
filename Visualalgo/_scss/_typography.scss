@@ -1,19 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Alata|Calistoga&display=swap');
+
 html {
     font-family: var(--font-family-text);
     scroll-behavior: smooth;
-}
-
-body {
-    animation: anim opacity 1s ease-in-out;
-}
-
-@keyframes anim {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    font-family: var(--font-family-text);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,9 +11,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem;
 }
 
-h1 {
-    font-size: 2.7em;
-}
+h1 { font-size: 2.7em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
+
 
 ul li {
     list-style-type: none;

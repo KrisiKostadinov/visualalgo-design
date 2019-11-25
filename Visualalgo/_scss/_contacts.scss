@@ -1,10 +1,26 @@
+body {
+    background-color: $contacts-body-color;
+}
+
+.contacts-form {
+    background-color: $contacts-container-color;
+    width: 90%;
+    margin: 2em auto;
+
+    .content {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+
+        p {
+            color: $contacts-content-color;
+        }
+    }
+}
+
 .contacts-form form {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
-    background-color: var(--light-gray-color);
-    padding: 2em;
-    border-radius: 1em;
-    box-shadow: 0 0 7px var(--light-gray-color);
 }
 
 .contacts-form > h2 {
@@ -44,6 +60,7 @@
     color: var(--text-light-color);
     cursor: pointer;
     border: none;
+    transition: background-color 1s ease-in;
 }
 
 .contacts-form button:hover {

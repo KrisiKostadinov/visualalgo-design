@@ -17,12 +17,14 @@
             {% include navigation-main.html %}
           </div>
           <div class="wrapper">
-            <div class="main-header">
-              {% include main-header.html %}
-            </div>
-            <div class="right-header">
-              {% include right-header.html %}
-            </div>
+            {% if page.title != 'About' %}
+              <div class="main-header">
+                {% include main-header.html %}
+              </div>
+              <div class="right-header">
+                {% include right-header.html %}
+              </div>
+            {% endif %}
           </div>
         </header>
         <div id="main">
