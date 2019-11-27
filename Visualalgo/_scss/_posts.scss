@@ -9,15 +9,21 @@ main {
         
         article {
             width: calc(50% - 2em);
+            height: auto;
             border-top: none;
             padding: 1em;
             margin: 1em;
             box-shadow: 0 0 7px $blog-post-box-shadow-color;
-            transition: transform 0.7s ease-in;
+            transition: transform 0.2s ease-in, border-radius 0.7s ease-in-out;
             
             &:hover {
                 transform: scale(1.1);
-                box-shadow: 0 0 px $blog-post-box-shadow-color;
+                box-shadow: 0 0 20px $blog-post-box-shadow-color;
+                border-radius: 2em;
+
+                img {
+                    width: 100%;
+                }
             }
 
             h4 {
@@ -54,10 +60,25 @@ main {
             }
 
             .footer-post {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 padding: 2em 0 0 0;
 
                 .fas {
                     color: $index-bg-box-color;
+                }
+
+                a {
+                    padding: 0.7em 1em;
+                    background-color: $index-bg-box-color;
+                    color: $blog-post-light-content-color;
+                    transition: background-color 0.2s ease-out;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $index-bg-box-color;
+                    }
                 }
             }
         }
