@@ -27,7 +27,8 @@
             {% endif %}
           </div>
         </header>
-        {% if page.title == 'Contacts' %}
+        <main>
+          {% if page.title == 'Contacts' %}
           <div class="main main-about">
             {{ content }}
           </div>
@@ -36,6 +37,7 @@
               {{ content }}
             </div>
         {% endif %}
+        </main>
         <footer>
           {% include footer.html %}
         </footer>

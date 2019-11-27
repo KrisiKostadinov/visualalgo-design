@@ -30,3 +30,17 @@ a {
 .wrapper {
     padding: 2em;
 }
+
+main {
+    opacity: 0;
+    animation: show-in-main 1s forwards;
+}
+
+@keyframes show-in-main {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
