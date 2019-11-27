@@ -9,18 +9,20 @@ order: 2
     {% for post in site.posts %}
         <article class="post">
             <a href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
-            {% if post.imgurl %}
-            <a href="{{ post.url }}">
-                <img src="{{ post.imgurl}}" alt="">
-            </a>
-            {% else %}
-                <h4>No photo</h4>
-            {% endif %}
-            {% if post.description %}
-                <p>{{ post.description }}</p>
-            {% else %}
-                <h4>No description</h4>
-            {% endif %}
+            <div class="main-post">
+                {% if post.imgurl %}
+                <a href="{{ post.url }}">
+                    <img src="{{ post.imgurl}}" alt="">
+                </a>
+                {% else %}
+                    <h4>No photo</h4>
+                {% endif %}
+                {% if post.description %}
+                    <p>{{ post.description }}</p>
+                {% else %}
+                    <h4>No description</h4>
+                {% endif %}
+            </div>
             <div class="footer-post">
                 <p><i class="fas fa-calendar-alt"></i> {{ post.posted-on}}</p>
                 <a href="{{ post.url }}">Read More...</a>

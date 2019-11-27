@@ -8,21 +8,34 @@ main {
         padding-top: 2em;
         
         article {
-            width: calc(50% - 2em);
+            width: 100%;
             height: auto;
             border-top: none;
             padding: 1em;
             margin: 1em;
-            box-shadow: 0 0 7px $blog-post-box-shadow-color;
-            transition: transform 0.2s ease-in, border-radius 0.7s ease-in-out;
+            box-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.2);
+            transition: box-shadow 0.2s ease-in, border-radius 0.7s ease-in-out;
+
+            .main-post {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 2em;
+
+                @include bp(mobile) {
+                    grid-template-columns: 1fr;
+                }
+            }
             
             &:hover {
-                transform: scale(1.1);
-                box-shadow: 0 0 20px $blog-post-box-shadow-color;
+                box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
                 border-radius: 2em;
-
+                
                 img {
-                    width: 100%;
+                    transition: transform 0.2s ease-in;
+
+                    &:hover {
+                        transform: scale(1.07);
+                    }
                 }
             }
 
