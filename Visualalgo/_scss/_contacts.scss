@@ -1,70 +1,106 @@
 .main-about {
-    background-color: $contacts-body-color;
+    background-color: $main-body-color;
     padding: 2em;
 }
 
 .contacts-form {
-    background-color: $contacts-container-color;
-    width: 90%;
+    background-color: $main-box-color;
+    width: 24em;
+    padding: 2em;
     margin: 0 auto;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    border-radius: 2em;
+
+    h2 {
+        text-align: center;
+        background-color: $main-heading-bg-color;
+        border-radius: 2em;
+        padding: 0;
+        color: $main-heading-color;
+        margin: 1em 0;
+        position: relative;
+        text-shadow: 2px 2px 2px black;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -40px;
+            transform: translateX(-50%);
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $main-heading-bg-color;
+            border-bottom: 20px solid transparent;
+        }
+    }
 
     .content {
         width: 90%;
         margin: 0 auto;
-        padding-bottom: 2em;
 
         p {
-            color: $contacts-content-color;
+            color: $main-content-color;
         }
     }
-}
 
-.contacts-form form {
-    width: 90%;
-    margin: 0 auto;
-}
+        
+    form {
+        width: 20em;
+        margin: 0 auto;
+        margin-top: 7em;
 
-.contacts-form > h2 {
-    text-align: center;
-}
+        h2 {
+            text-align: center;
+        }
+    
+        input, textarea, button {
+            width: 100%;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            padding: 1em;
+            outline: none;
+        }
+    
+        label {
+            color: $main-content-light-color;
+            text-transform: capitalize;
+            background-color: $main-heading-bg-color;
+            padding: 0.2em 1em;
+            border-radius: 2em;
+        }
+    
+        input, textarea {
+            border: none;
+            border-bottom: 2px solid $main-content-color;
+            transition: border-color 0.2s ease-in-out;
+    
+            &:hover, &:focus {
+                border-bottom-color: $contacts-input-hover-color;
+            }
+        }
 
-.contacts-form input,
-.contacts-form textarea,
-.contacts-form button {
-    width: 100%;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    padding: 1em 2em;
-    outline: none;
-}
-
-.contacts-form label {
-    color: var(--black-bg-color);
-    text-transform: uppercase;
-}
-
-.contacts-form input,
-.contacts-form textarea {
-    border: 1px solid var(--dark-gray-color);
-}
-
-.contacts-form input:hover,
-.contacts-form textarea:hover,
-.contacts-form input:focus,
-.contacts-form textarea:focus {
-    border: 1px solid var(--dark-bg-color);
-}
-
-.contacts-form button {
-    text-transform: uppercase;
-    background-color: var(--dark-bg-color);
-    color: var(--text-light-color);
-    cursor: pointer;
-    border: none;
-    transition: background-color 1s ease-in;
-}
-
-.contacts-form button:hover {
-    background-color: transparent;
-    color: var(--dark-bg-color);
+        textarea {
+            max-width: 100%;
+            min-width: 100%;
+            max-height: 400px;
+            min-height: 200px;
+        }
+    
+        button {
+            text-transform: uppercase;
+            color: $main-box-color;
+            background-color: $main-button-color;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s ease-in-out;
+            border: 2px solid $main-button-color;
+            border-radius: 2em;
+    
+            &:hover, &:focus {
+                border-color: $main-button-color;
+                color: $main-button-color;
+                background-color: $main-button-hover-color;
+            }
+        }
+    }
 }

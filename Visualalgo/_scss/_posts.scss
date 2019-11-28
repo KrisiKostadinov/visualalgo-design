@@ -13,7 +13,7 @@ main {
             border-top: none;
             padding: 1em;
             margin: 1em;
-            box-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.2);
+            box-shadow: 0 0 7px $blog-post-box-shadow-color;
             transition: box-shadow 0.2s ease-in, border-radius 0.7s ease-in-out;
 
             .main-post {
@@ -27,7 +27,7 @@ main {
             }
             
             &:hover {
-                box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+                box-shadow: 0 0 20px $blog-post-box-shadow-hover-color;
                 border-radius: 2em;
                 
                 img {
@@ -44,9 +44,10 @@ main {
             }
 
             a {
-                color: $blog-post-title-color;
+                color: $blog-post-heading-color;
                 h2 {
                     padding-left: 0;
+                    padding-bottom: 1em;
                     
                     @include bp (mobile) {
                         text-align: center;

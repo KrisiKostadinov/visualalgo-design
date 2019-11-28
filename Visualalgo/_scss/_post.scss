@@ -23,7 +23,6 @@ article.post-index {
             
             p {
                 color: $blog-post-light-content-color;
-                font-size: 1.7em;
             }
         }
         
@@ -44,7 +43,7 @@ article.post-index {
         background-color: white;
         width: 70%;
         margin: 0 auto;
-        box-shadow: 0 0 2em rgba($color: #000000, $alpha: 0.2);
+        box-shadow: 0 0 2em $blog-post-box-shadow-color;
         border-radius: 1em;
 
         h2 {
@@ -54,7 +53,6 @@ article.post-index {
         p {
             padding-bottom: 1em;
             color: $blog-post-content-color;
-            font-size: 1.2em;
             width: 100%;
         }
 
@@ -67,11 +65,6 @@ article.post-index {
         ul, ol {
             margin: 1em 0;
             color: $blog-post-content-color;
-            font-size: 1.2em;
-
-            li {
-                margin-left: 2em;
-            }
         }
         
         ol {
@@ -81,19 +74,17 @@ article.post-index {
         img {
             width: 100%;
             border-radius: 1em;
-            box-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.2);
+            box-shadow: 0 0 7px $blog-post-box-shadow-color;
             margin-bottom: 1em;
         }
         
         blockquote {
             width: 100%;
-            padding: 2em;
 
             p {
-                border-left: 2px solid $blog-post-box-shadow-color;
+                border-left: 2px solid $blog-border-color;
                 padding-left: 1em;
-                color: $blog-post-box-shadow-color;
-                font-size: 2.2em;
+                color: $blog-post-content-color;
             }
         }
     }

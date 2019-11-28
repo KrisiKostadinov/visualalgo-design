@@ -22,62 +22,59 @@ header .left-header {
 header .right-header {
     background-color: var(--dark-bg-color);
     box-shadow: 0 0 7px var(--text-dark-color);
-}
 
-header .right-header h2 {
-    width: fit-content;
-    margin: 2em auto 4em auto;
-    text-align: center;
-    font-size: 2em;
-    color: var(--text-light-color);;
-    text-shadow: 0 0 7px #000;
-    z-index: 100;
-    text-transform: uppercase;
-    position: relative;
-    border-bottom: 2px solid var(--text-light-color);;
-    border-left: 2px solid var(--text-light-color);;
-    border-right: 2px solid var(--text-light-color);;
-}
+    h2 {    
+        width: fit-content;
+        margin: 0.7em auto 2.7em auto;
+        text-align: center;
+        font-size: 4em;
+        color: var(--text-light-color);
+        text-shadow: 0 0 7px #000;
+        z-index: 100;
+        text-transform: uppercase;
+        position: relative;
+        border-bottom: 2px solid var(--text-light-color);
+        border-left: 2px solid var(--text-light-color);
+        border-right: 2px solid var(--text-light-color);
 
-header .right-header h2::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border: 0 solid transparent;
-    border-left-width: 70px;
-    border-right-width: 70px;
-    border-top: 70px solid var(--text-light-color);
-    position: absolute;
-    left: 50%;
-    bottom: calc(-70px);
-    transform: translateX(-50%);
-}
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-left-width: 70px;
+            border-right-width: 70px;
+            border-top: 70px solid var(--text-light-color);
+            position: absolute;
+            left: 50%;
+            bottom: calc(-70px);
+            transform: translateX(-50%);
+        }
+    }
 
-header .right-header form {
-    text-align: center;
-    color: var(--text-light-color);;
-    padding: 0 2em;
-}
+    form {
+        text-align: center;
+        color: var(--text-light-color);
+        padding: 0 2em;
 
-header .right-header form input {
-    width: 100%;
-    padding: 1em;
-    border: 2px solid #dbdbdb;
-    margin-top: 1em;
-    box-shadow: 0 2px 7px var(--text-dark-color);
-    outline: none;
-}
-
-header form button {
-    width: 100%;
-    border: 2px solid transparent;
-    padding: 1em 0;
-    margin-top: 2em;
-    color: var(--text-dark-color);
-    background-color: var(--text-light-color);;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+        input {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 1em;
+            outline: none;
+        }
+        
+        button {
+            width: 100%;
+            padding: 0.7em 0;
+            margin-top: 2em;
+            color: var(--text-dark-color);
+            background-color: var(--text-light-color);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+        }
+    }
 }
 
 header form button:hover {
@@ -118,17 +115,19 @@ header .social-links li a i:hover {
     
     @include bp (mobile) {
         width: 100%;
+
+        h1 {
+            margin-top: 2em;
+        }
+        
+        p {
+            padding: 1em 0;
+        }
     }
 
     h1, p {
         opacity: 0;
         text-shadow: 0 0 7px var(--text-dark-color);
-    }
-
-    p {
-        @include bp (mobile) {
-            font-size: 2em;
-        }
     }
 }
 

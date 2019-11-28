@@ -1,6 +1,6 @@
 .page-item {
     background-color: var(--dark-bg-color);
-    border-radius: 2em;
+    border-radius: 0.2em;
 }
 
 .page-item a {
@@ -18,19 +18,30 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
+
+    @include bp(mobile) {
+        font-size: 1.7em;
+    }
 }
 
 nav ul li a {
     display: block;
-    padding: 1em;
+    font-size: 1em;
+    padding: 0.7em 1em;
     color: var(--text-dark-color);
 }
 
 nav h2 {
     padding: 0 0 0.2em 0;
+    font-size: 1em;
     margin: 1em;
     color: var(--text-light-color);
     border-bottom: 2px solid var(--text-dark-color);
+
+    
+    @include bp(mobile) {
+        font-size: 2em;
+    }
 }
 
 nav h2 span:first-child {

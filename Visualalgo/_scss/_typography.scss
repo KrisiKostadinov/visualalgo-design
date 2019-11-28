@@ -4,11 +4,26 @@ html {
     font-family: var(--font-family-text);
     scroll-behavior: smooth;
     font-family: var(--font-family-text);
+
+    @include bp(large) {
+        font-size: 20px;
+    }
+    
+    @include bp(desktop) {
+        font-size: 18px;
+    }
+    
+    @include bp(mobile) {
+        font-size: 16px;
+    }
+    
+    @include bp(phone) {
+        font-size: 14px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
-    padding: 2rem;
 }
 
 h1 { font-size: 2.7em; }
@@ -18,6 +33,13 @@ h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }
 
+input, label, button, p, a, ol, ul {
+    font-size: inherit;
+}
+
+blockquote, ul, ol {
+    padding-left: 2em;
+}
 
 ul li {
     list-style-type: none;
@@ -34,6 +56,10 @@ a {
 main {
     opacity: 0;
     animation: show-in-main 1s forwards;
+}
+
+blockquote p {
+    font-style: italic;
 }
 
 @keyframes show-in-main {
