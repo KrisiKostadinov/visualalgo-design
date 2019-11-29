@@ -100,10 +100,10 @@
     
     .content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
 
         @include bp (mobile) {
-            grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         }
 
         .fab {
@@ -120,10 +120,16 @@
             padding: 1em;
             border-top-left-radius: 0.7em;
             border-top-right-radius: 0.7em;
+            box-shadow: 0 0 7px $blog-post-box-shadow-hover-color;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
             h3 {
                 padding: 0;
                 font-size: 1.2em;
+            }
+
+            i {
+                transition: color 0.2s ease-in-out;
             }
             
             p {
@@ -136,6 +142,16 @@
 
             .box-content {
                 display: flex;
+            }
+            
+            &:hover {
+                color: $main-content-color;
+                background-color: transparent;
+                transform: scale(1.1);
+                
+                i {
+                    color: $main-content-color;
+                }
             }
         }
     }

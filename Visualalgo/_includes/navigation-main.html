@@ -1,6 +1,6 @@
 <input type="checkbox" id="menu">
 <label for="menu">Menu</label>
-<nav class="navbar">
+<nav class="navbar wrapper">
     <ul>
         {% assign navigation = site.pages | sort:"order" %}
         {% for page in navigation %}

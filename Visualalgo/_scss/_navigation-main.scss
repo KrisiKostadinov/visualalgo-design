@@ -34,7 +34,11 @@ header ul {
 
 @include bp (mobile) {
     .left-header input:checked ~ nav {
+        width: 100%;
+        background-color: $index-bg-box-color;
+        z-index: 9;
         display: block;
+        position: fixed;
 
         ul {
             display: block;

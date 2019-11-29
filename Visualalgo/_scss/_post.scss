@@ -27,15 +27,6 @@ article.post-index {
                 color: $blog-post-light-content-color;
             }
         }
-        
-        img {
-            width: 100%;
-            height: auto;
-            border: none;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
     }
     
     .content {
@@ -47,7 +38,7 @@ article.post-index {
         margin: 0 auto;
         box-shadow: 0 0 2em $blog-post-box-shadow-color;
         border-radius: 1em;
-
+        
         h2 {
             padding: 0 0 1em 0;
         }
@@ -89,5 +80,9 @@ article.post-index {
                 color: $blog-post-content-color;
             }
         }
+    }
+    
+    footer {
+        padding-top: 2em;
     }
 }

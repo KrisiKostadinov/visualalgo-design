@@ -7,10 +7,14 @@ nav.navbar ul li {
     animation: li-show 0.2s forwards;
 }
 
-nav.navbar ul li:nth-child(1) { animation-delay: 1.2s; }
-nav.navbar ul li:nth-child(2) { animation-delay: 1.4s; }
-nav.navbar ul li:nth-child(3) { animation-delay: 1.6s; }
-nav.navbar ul li:nth-child(4) { animation-delay: 1.8s; }
+nav.navbar ul {
+    @include bp(desktop) {
+        li:nth-child(1) { animation-delay: 1.2s; }
+        li:nth-child(2) { animation-delay: 1.4s; }
+        li:nth-child(3) { animation-delay: 1.6s; }
+        li:nth-child(4) { animation-delay: 1.8s; }
+    }
+}
 
 @keyframes ul-show {
     0% {
