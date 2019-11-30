@@ -1,21 +1,67 @@
 <div class="wrapper">
-    <p>&copy; All rights reversed</p>
-    <ul class="social-links">
-        <h4>Social</h4>
-        <div class="links">
+    <section>
+        <article>
+            <h2>Personal</h2>
+            <p>Company Logo</p>
+        </article>
+        <article>
+            <h2>About Us</h2>
+            <p>This design is personality with <strong>Jekyll</strong></p>
+        </article>
+        <article>
+            <h2>Contacts Us</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-phone-square"></i>
+                    <span>0899 9999 99</span>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>krisi.199898@gmail.com</span>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        <h2>Navigation</h2>
+        <article>
+            <ul>
+                {% for page in site.pages %}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </article>
+    </section>
+    <section class="social-links">
+        <h2>Follow</h2>
+        <ul>
             <li>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
             </li>
             <li>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
             </li>
             <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
             </li>
             <li>
-            <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-github-square"></i> GitHub</a>
             </li>
-        </div>
-    </ul>
-    <p>Privacy Policy</p>
+        </ul>
+    </section>
+    <section class="form">
+        <h2>Subscribe More Info</h2>
+        <form>
+            <div class="field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your Email">
+            </div>
+            <div class="field submit">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+    </section>
 </div>
+<p>&copy; All rights reversed</p>

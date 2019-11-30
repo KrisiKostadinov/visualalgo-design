@@ -1,50 +1,166 @@
+$headings-color: #4696ff;
+$content-color: #dadada;
+$text-shadow-color: #cccccc;
+$text-light-color: #ffffff;
+
 footer {
     background-color: var(--black-bg-color);
     color: var(--text-light-color);
-}
+    padding: 2em;
 
-footer .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer .social-links {
-    text-align: center;
-}
-
-footer .social-links h4 {
-    margin-bottom: 1em;
-}
-
-footer .social-links .links {
-    display: flex;
-}
-
-footer .social-links .links li {
-    margin: 0 10px;
-}
-
-footer .social-links .links li a i {
-    display: block;
-    padding: 1em;
-    background-color: var(--black-bg-color);
-    border-radius: 2em;
-    color: #fff;
-    transition: background-color 0.7s ease-in-out, transform 0.2s ease-out;
-}
-
-footer .social-links .links li a i:hover {
-    background-color: var(--dark-bg-color);
-    transform: scale(1.07);
-}
-
-@media only screen and (max-width: 600px) {
-    footer .wrapper {
-        flex-direction: column-reverse;
+    .content {
+        border-bottom: 2px solid black;
     }
 
-    footer .social-links {
-        margin: 2em 0;
+    h2 {
+        padding: 0;
+        padding-bottom: 0.7em;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 4em;
+        border-bottom: 2px solid;
+        padding: 2em;
+        padding-bottom: 2.7em;
+
+        @include bp(mobile) {
+            grid-template-columns: auto;
+        }
+
+        p {
+            color: $content-color;
+        }
+
+        section:first-child {
+            display: grid;
+            grid-template-rows: repeat(3, 30%);
+            grid-gap: 1em;
+
+            article:first-child {
+                h2 {
+                    padding: 0;
+                }
+            }
+    
+            article:not(:first-child) {
+                h2 {
+                    color: $headings-color;
+                }
+            }
+
+            article:nth-child(3) {
+                ul {
+                    padding: 0;
+
+                    li {
+                        i {
+                            color: $headings-color;
+                            padding-right: 2em;
+                        }
+                    }
+                }
+            }
+        }
+
+        section:not(:first-child) {
+            h2 {
+                color: $headings-color;
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    transition: transform 0.2s ease-in-out;
+                    
+                    a {
+                        color: $content-color;
+                        transition: color 0.2s ease-in-out;
+
+                        &:hover {
+                            color: $headings-color;
+                        }
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        section.social-links {
+            ul {
+                display: grid;
+                grid-template-rows: 30% -1fr;
+                grid-gap: 1em;
+
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;    
+                        font-weight: bold;
+
+                        i {
+                            padding-right: 0.7em;
+                            font-size: 1.7em;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.form {
+            .field {
+                display: flex;
+                position: relative;
+                margin-bottom: 1em;
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 0.2em;
+                    transform: translateY(-50%);
+                    color: $headings-color;
+                    display: block;
+                    font-size: 1.7em;
+                    text-shadow: 0 0 10px $text-shadow-color;
+                }
+
+                input[type="email"] {
+                    width: 100%;
+                    padding: 0.7em;
+                    padding-left: 2.2em;
+                    outline: none;
+                    border-radius: 0.2em;
+                    border: none;
+                }
+            }
+
+            .field.submit {
+                input[type="submit"] {
+                    color: $text-light-color;
+                    background-color: $headings-color;
+                    border: none;
+                    padding: 0.7em;
+                    border-radius: 0.2em;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+                    outline: none;
+                    
+                    &:hover {
+                        color: $headings-color;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    & > p {
+        text-align: center;
+        padding-top: 1.7em;
     }
 }

@@ -1,17 +1,15 @@
-.wrapper h2 {
-    text-align: center;
-}
-
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-
     h2 {
         text-align: center;
         color: var(--black-bg-color);
         text-transform: uppercase;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
     }
     
     article {
@@ -80,6 +78,7 @@
     
     h2 {
         letter-spacing: 1px;
+        text-align: center;
     }
 
     h2 span {
