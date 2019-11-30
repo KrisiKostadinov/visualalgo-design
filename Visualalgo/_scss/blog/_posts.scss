@@ -47,7 +47,6 @@ main {
                 color: $blog-post-heading-color;
                 h2 {
                     padding-left: 0;
-                    padding-bottom: 1em;
                     
                     @include bp (mobile) {
                         text-align: center;
@@ -96,5 +95,16 @@ main {
                 }
             }
         }
+    }
+}
+
+footer.posts-footer {
+    padding: 2em;
+    margin-top: 2em;
+    background-color: $blog-post-content-color;
+
+    p {
+        color: $blog-post-light-content-color;
+        text-align: center;
     }
 }

@@ -18,12 +18,13 @@ article.post-index {
             }
             
             h1 {
-                padding: 1em 0 0 0;
+                padding-top: 2em;
                 color: $blog-post-light-content-color;
                 letter-spacing: 2px;
             }
             
             p {
+                padding-top: 1em;
                 color: $blog-post-light-content-color;
             }
         }
@@ -82,7 +83,7 @@ article.post-index {
         }
     }
     
-    footer {
+    footer.post-footer {
         padding-top: 2em;
     }
 }
