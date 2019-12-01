@@ -13,15 +13,17 @@ nav {
     justify-content: space-around;
     width: 100%;
     box-shadow: 0 0 10px var(--dark-gray-color);
+    padding: 0;
+
+    & > a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 nav ul {
     display: flex;
     align-items: center;
-
-    @include bp(mobile) {
-        font-size: 1.7em;
-    }
 }
 
 nav ul li a {
@@ -43,7 +45,6 @@ nav ul li a {
 nav h2 {
     padding: 0 0 0.2em 0;
     font-size: 1em;
-    margin: 1em;
     color: var(--text-light-color);
     border-bottom: 2px solid var(--text-dark-color);
 

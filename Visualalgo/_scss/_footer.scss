@@ -78,13 +78,14 @@ footer {
                     a {
                         color: $content-color;
                         transition: color 0.2s ease-in-out;
+                        outline: none;
 
-                        &:hover {
+                        &:hover, &:focus {
                             color: $headings-color;
                         }
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
                         transform: scale(1.1);
                     }
                 }
@@ -150,7 +151,7 @@ footer {
                     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
                     outline: none;
                     
-                    &:hover {
+                    &:hover, &:focus {
                         color: $headings-color;
                         background-color: transparent;
                     }

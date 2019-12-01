@@ -16,7 +16,10 @@
 
         .wrapper {
             width: 70%;
-            padding-top: 10em;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             
             h2 {
                 color: $blog-post-light-content-color;
