@@ -5,24 +5,35 @@ permalink: /contacts/
 order: 4
 ---
 
-<div class="contacts-form">
-    <h2>Contacts</h2>
-    <form>
-        <div class="group-input">
-            <label>Email Address *</label>
-            <input type="text" placeholder="Email Address..." autofocus>
+<div class="contacts">
+    <input type="checkbox" id="show-btn">
+    <div class="show">
+        <label for="show-btn"></label>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.7442397451455!2d23.35008831492654!3d42.666774979167464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cca4a719b7%3A0xdf53fcbcd8e758d7!2z0KHQvtGE0YLRg9C10YDQtdC9INGD0L3QuNCy0LXRgNGB0LjRgtC10YI!5e0!3m2!1sbg!2sbg!4v1575284814426!5m2!1sbg!2sbg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <div class="contacts-form">
+        <h2>Contacts</h2>
+        <form>
+            <div class="text-fields">
+                <div class="group-input">
+                    <label>Name *</label>
+                    <input type="text" placeholder="Name...">
+                </div>
+                <div class="group-input">
+                    <label>Email Address *</label>
+                    <input type="text" placeholder="Email Address..." autofocus>
+                </div>
+            </div>
+            <div class="textarea">
+                <div class="group-input">
+                    <label>Message *</label>
+                    <textarea cols="30" rows="10" placeholder="Your message..."></textarea>
+                </div>
+            </div>
+            <button>Send</button>
+        </form>
+        <div class="content">
+            <p>We’ve made a contact form that you can use with Formspree to handle up to 50 submissions per month for free. You could also easily switch out the end-point to use another contact form service.</p>
         </div>
-        <div class="group-input">
-            <label>Name *</label>
-            <input type="text" placeholder="Name...">
-        </div>
-        <div class="group-input">
-            <label>Message *</label>
-            <textarea cols="30" rows="10" placeholder="Your message..."></textarea>
-        </div>
-        <button>Send</button>
-    </form>
-    <div class="content">
-        <p>We’ve made a contact form that you can use with Formspree to handle up to 50 submissions per month for free. You could also easily switch out the end-point to use another contact form service.</p>
     </div>
 </div>

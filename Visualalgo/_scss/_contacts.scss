@@ -1,15 +1,76 @@
+$show-btn-bg-color: #0066ff;
+$show-bg-color: #ffffff;
+
+$animation-seconds: 0.7s;
+
 .main-about {
     background-color: $main-body-color;
     padding: 2em;
 }
 
+.contacts {
+    position: relative;
+
+    & > input {
+        display: none;
+
+        &:checked ~ .contacts-form {
+            display: none;
+        }
+        
+        &:checked ~ iframe {
+            display: block;
+        }
+    }
+
+    .show {
+        position: absolute;
+        right: 0;
+        top: -1em;
+        z-index: 200;
+
+        label {
+            padding: 0 1em;
+            border-top-right-radius: 2em;
+            border-bottom-left-radius: 2em;
+            border-top-left-radius: 2em;
+            border: none;
+            background-color: $show-btn-bg-color;
+            color: $show-bg-color;
+            cursor: pointer;
+            border: 2px solid $show-btn-bg-color;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+            &::after {
+                content: 'Switch';
+            }
+
+            &:hover {
+                color: $show-btn-bg-color;
+                background-color: $show-bg-color;
+            }
+        }
+    }
+
+    iframe {
+        display: none;
+        width: 100%;
+    }
+}
+
+.contacts-form,
+iframe {
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    animation: show-in $animation-seconds forwards;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
 .contacts-form {
     background-color: $main-box-color;
-    width: 24em;
+    width: 100%;
     padding: 2em;
     margin: 0 auto;
-    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
-    border-radius: 2em;
 
     h2 {
         text-align: center;
@@ -45,9 +106,18 @@
 
         
     form {
-        width: 20em;
+        width: 100%;
         margin: 0 auto;
         margin-top: 7em;
+
+        .text-fields {
+            display: grid;
+
+            @include bp(desktop) {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 2em;
+            }
+        }
 
         h2 {
             text-align: center;
@@ -102,5 +172,16 @@
                 background-color: $main-button-hover-color;
             }
         }
+    }
+}
+
+@keyframes show-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
