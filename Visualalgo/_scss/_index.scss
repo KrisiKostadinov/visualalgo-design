@@ -74,11 +74,11 @@
 }
 
 .services {
-    padding-top: 2em;
-    
     h2 {
         letter-spacing: 1px;
         text-align: center;
+        padding: 1em 0;
+        padding-bottom: 0.2em;
     }
 
     h2 span {
@@ -89,6 +89,7 @@
         width: 50%;
         margin: 0 auto;
         text-align: center;
+        padding: 0;
 
         @include bp (mobile) {
             width: 90%;
@@ -99,9 +100,13 @@
     
     .content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
 
         @include bp (mobile) {
+            grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        }
+
+        @include bp (phone) {
             grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         }
 
@@ -133,6 +138,7 @@
             
             p {
                 text-align: left;
+                padding: 0;
             }
 
             > p {

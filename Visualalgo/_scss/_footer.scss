@@ -2,6 +2,8 @@ $headings-color: #4696ff;
 $content-color: #dadada;
 $text-shadow-color: #cccccc;
 $text-light-color: #ffffff;
+$dark-color: #222222;
+$black-color: #000000;
 
 footer {
     background-color: var(--black-bg-color);
@@ -9,7 +11,7 @@ footer {
     padding: 2em;
 
     .content {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid $black-color;
     }
 
     h2 {
@@ -19,13 +21,17 @@ footer {
 
     .wrapper {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(4, auto);
         grid-gap: 4em;
         border-bottom: 2px solid;
         padding: 2em;
         padding-bottom: 2.7em;
 
         @include bp(mobile) {
+            grid-template-columns: repeat(2, auto);
+        }
+        
+        @include bp(phone) {
             grid-template-columns: auto;
         }
 
@@ -79,6 +85,7 @@ footer {
                         color: $content-color;
                         transition: color 0.2s ease-in-out;
                         outline: none;
+                        padding: 0;
 
                         &:hover, &:focus {
                             color: $headings-color;
@@ -124,19 +131,24 @@ footer {
                     top: 50%;
                     left: 0.2em;
                     transform: translateY(-50%);
-                    color: $headings-color;
+                    color: $text-light-color;
                     display: block;
                     font-size: 1.7em;
-                    text-shadow: 0 0 10px $text-shadow-color;
                 }
 
                 input[type="email"] {
+                    color: $text-light-color;
                     width: 100%;
                     padding: 0.7em;
                     padding-left: 2.2em;
                     outline: none;
                     border-radius: 0.2em;
                     border: none;
+                    background-color: $black-color;
+
+                    &::placeholder {
+                        color: $text-light-color;
+                    }
                 }
             }
 
