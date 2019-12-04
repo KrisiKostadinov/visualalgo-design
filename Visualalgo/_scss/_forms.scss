@@ -46,7 +46,8 @@ section.forms {
         }
     }
     
-    .forms-login {
+    .forms-login,
+    .forms-register {
         h4 {
             color: $login-color;
         }
@@ -160,6 +161,20 @@ section.forms {
         display: none;
     }
 
+    & > input:checked {
+        & ~ .container span:nth-child(1),
+        & ~ .container span:nth-child(2),
+        & ~ .container span:nth-child(3) {
+            animation: anim-first 1s forwards;
+        }
+
+        & ~ .container span:nth-child(4),
+        & ~ .container span:nth-child(5),
+        & ~ .container span:nth-child(6) {
+            animation: anim-second 1s forwards;
+        }
+    }
+
     .container {
         width: 50%;
         height: 100%;
@@ -229,5 +244,29 @@ section.forms {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes anim-first {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -50%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes anim-second {
+    0% {
+        top: 100%;
+    }
+    50% {
+        top: 150%;
+    }
+    100% {
+        top: 100%;
     }
 }
