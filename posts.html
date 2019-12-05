@@ -12,7 +12,7 @@ order: 2
             <div class="main-post">
                 {% if post.imgurl %}
                 <a href="{{ site.baseurl }}{{ post.url }}">
-                    <img src="{{ site.baseurl }}{{ post.imgurl}}" alt="">
+                    <img src="{{ post.imgurl}}" alt="">
                 </a>
                 {% else %}
                     <h4>No photo</h4>
