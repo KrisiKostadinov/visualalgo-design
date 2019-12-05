@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Alata|Calistoga&display=swap');
 
 html {
-    font: 20px/1.4 var(--font-family-text);
+    font: 12px/1.4 var(--font-family-text);
     scroll-behavior: smooth;
     @include bp(desktop) {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     @include bp(mobile) {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     @include bp(phone) {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
-    padding: 1em;
+    font-size: inherit;
+    padding: 0.2em;
 }
 
 h1 { font-size: 2.4em; }

@@ -1,8 +1,4 @@
 .about {
-    @include bp(mobile) {
-        font-size: 1.6em;
-    }
-    
     header {
         width: 100%;
         height: 70vh;
