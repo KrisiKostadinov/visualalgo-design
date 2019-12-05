@@ -1,4 +1,4 @@
-.products {
+.news {
     h2 {
         text-align: center;
         color: var(--black-bg-color);
@@ -13,6 +13,9 @@
     }
     
     article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         flex: calc(50% - 2em) 0 1;
         margin: 1em;
         border-radius: 1em;
@@ -60,10 +63,6 @@
         p {
             padding: 1em;
             text-align: left;
-        }
-
-        img {
-            width: 100%;
         }
 
         p {

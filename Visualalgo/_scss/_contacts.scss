@@ -3,12 +3,9 @@ $show-bg-color: #ffffff;
 
 $animation-seconds: 0.7s;
 
-.main-about {
-    background-color: $main-body-color;
-    padding: 2em;
-}
-
 .contacts {
+    width: 90%;
+    margin: 2em auto;
     position: relative;
 
     & > input {
@@ -58,19 +55,16 @@ $animation-seconds: 0.7s;
     }
 }
 
-.contacts-form,
-iframe {
-    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
-    animation: show-in $animation-seconds forwards;
-    border-bottom-left-radius: 1em;
-    border-top-left-radius: 1em;
+.contacts-form {
+    padding: 2em;
 }
 
-.contacts-form {
-    background-color: $main-box-color;
-    width: 100%;
-    padding: 2em;
-    margin: 0 auto;
+.contacts-form,
+iframe {
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    animation: show-in $animation-seconds forwards;
 
     h2 {
         text-align: center;
@@ -140,9 +134,10 @@ iframe {
         }
     
         input, textarea {
-            border: none;
+            border: 1px solid $blog-border-color;
             border-bottom: 2px solid $main-content-color;
             transition: border-color 0.2s ease-in-out;
+            border-radius: 0.2em;
     
             &:hover, &:focus {
                 border-bottom-color: $contacts-input-hover-color;

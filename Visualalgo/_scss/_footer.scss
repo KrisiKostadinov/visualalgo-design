@@ -9,12 +9,13 @@ footer {
     background-color: var(--black-bg-color);
     color: var(--text-light-color);
     padding: 2em;
+    padding-bottom: 0;
 
     .content {
         border-bottom: 2px solid $black-color;
     }
 
-    h2 {
+    h4 {
         padding: 0;
         padding-bottom: 0.7em;
     }
@@ -45,13 +46,13 @@ footer {
             grid-gap: 1em;
 
             article:first-child {
-                h2 {
+                h4 {
                     padding: 0;
                 }
             }
     
             article:not(:first-child) {
-                h2 {
+                h4 {
                     color: $headings-color;
                 }
             }
@@ -71,7 +72,7 @@ footer {
         }
 
         section:not(:first-child) {
-            h2 {
+            h4 {
                 color: $headings-color;
             }
 
@@ -174,6 +175,5 @@ footer {
 
     & > p {
         text-align: center;
-        padding-top: 1.7em;
     }
 }

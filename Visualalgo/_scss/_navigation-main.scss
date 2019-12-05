@@ -2,7 +2,6 @@
     position: absolute;
     right: 0;
     padding: 1em 0.5em;
-    font-size: 2em;
     background-color: var(--text-light-color);
     margin: 1em;
     border-radius: 2em;
@@ -21,6 +20,19 @@ header ul {
     box-shadow: 0 0 7px #00000022;
     transform: translateY(-2em);
     opacity: 0;
+
+    hr {
+        display: none;
+    
+        @include bp(mobile) {
+            display: block;
+            width: 70%;
+            height: 2px;
+            margin: 0 auto;
+            background-color: $main-box-color;
+            border: none;
+        }
+    }
 }
 
 .left-header input[type=checkbox] {
@@ -60,10 +72,6 @@ header ul {
     background-color: var(--text-light-bg-color);
     border-radius: 0.2em;
     color: var(--text-light-color);
-
-    @include bp (mobile) {
-        font-size: 2em;
-    }
 }
 
 .left-header nav.navbar ul li a:hover {

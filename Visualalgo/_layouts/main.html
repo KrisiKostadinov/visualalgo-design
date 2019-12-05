@@ -17,7 +17,7 @@
             {% include navigation-main.html %}
           </div>
           <div class="main-right-header wrapper">
-            {% if page.title != 'About' %}
+            {% if page.title != 'Login' %}
               <div class="main-header">
                 {% include main-header.html %}
               </div>
@@ -28,15 +28,7 @@
           </div>
         </header>
         <main>
-          {% if page.title == 'Contacts' %}
-          <div class="main main-about">
-            {{ content }}
-          </div>
-          {% else %}
-            <div id="main" class="main">
-              {{ content }}
-            </div>
-        {% endif %}
+          {{ content }}
         </main>
         <footer>
           {% include footer.html %}

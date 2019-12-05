@@ -156,13 +156,3 @@ header .social-links li a i:hover {
     background-color: var(--text-light-color);;
     color: var(--dark-bg-color);
 }
-
-@media only screen and (max-width: 770px) {
-    header .wrapper {
-        display: block;
-    }
-
-    .main-header {
-        width: 100%;
-    }
-}

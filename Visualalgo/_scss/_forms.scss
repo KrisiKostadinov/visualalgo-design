@@ -8,7 +8,8 @@ $animation-seconds: 0.7s;
 section.forms {
     position: relative;
     width: 90%;
-    height: 100vh;
+    height: auto;
+    padding: 1em 0;
     margin: 2em auto;
 
     .forms-login,
@@ -19,7 +20,12 @@ section.forms {
         animation-delay: $animation-seconds;
         opacity: 0;
 
-        h4 {
+        @include bp(mobile) {
+            width: 100%;
+        }
+
+        h2 {
+            color: $login-color;
             text-align: center;
             padding: 2em 0;
         }
@@ -48,10 +54,6 @@ section.forms {
     
     .forms-login,
     .forms-register {
-        h4 {
-            color: $login-color;
-        }
-        
         form {
             display: grid;
             row-gap: 4em;
@@ -109,7 +111,11 @@ section.forms {
             
             &:focus ~ label {
                 color: $login-color;
-                transform: translate(-1em, -1em);
+                transform: translateY(-1em);
+
+                @include bp(desktop) {
+                    transform: translate(-1em, -1em);
+                }
             }
         }
 
@@ -147,36 +153,42 @@ section.forms {
     .forms-register {
         display: none;
     }
-    
-    & > input:checked ~ .container {
-        transform: translateX(100%);
-    }
-    
-    & > input:checked ~ .forms-register {
-        display: block;
-        transform: translateX(100%);
-    }
-    
+
     & > input:checked ~ .forms-login {
         display: none;
     }
 
-    & > input:checked {
-        & ~ .container span:nth-child(1),
-        & ~ .container span:nth-child(2),
-        & ~ .container span:nth-child(3) {
-            animation: anim-first 1s forwards;
+    & > input:checked ~ .forms-register {
+        display: block;
+    }
+    
+    @include bp(desktop) {
+        
+        & > input:checked ~ .container {
+            transform: translateX(100%);
         }
-
-        & ~ .container span:nth-child(4),
-        & ~ .container span:nth-child(5),
-        & ~ .container span:nth-child(6) {
-            animation: anim-second 1s forwards;
+        
+        & > input:checked ~ .forms-register {
+            display: block;
+            transform: translateX(100%);
+        }
+    
+        & > input:checked {
+            & ~ .container span:nth-child(1),
+            & ~ .container span:nth-child(2),
+            & ~ .container span:nth-child(3) {
+                animation: anim-first 1s forwards;
+            }
+    
+            & ~ .container span:nth-child(4),
+            & ~ .container span:nth-child(5),
+            & ~ .container span:nth-child(6) {
+                animation: anim-second 1s forwards;
+            }
         }
     }
 
     .container {
-        width: 50%;
         height: 100%;
         position: absolute;
         background-color: $login-bg-color;
@@ -185,51 +197,61 @@ section.forms {
         box-shadow: 0 0 7px $login-bg-color;
         overflow: hidden;
 
-        & > span {
-            width: 200px;
-            height: 200px;
-            background-color: $login-color;
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.2;
+        @include bp(mobile) {
+            width: 100%;
         }
-        
-        & > span:nth-child(1) {
-            left: 0;
-            top: 0;
-            transform: translate(-50%, -50%);
-        }
+    }
 
-        & > span:nth-child(2) {
-            left: 100%;
-            top: 0%;
-            transform: translate(-50%, -50%);
-        }
-        
-        & > span:nth-child(3) {
-            width: 300px;
-            left: 50%;
-            top: 0%;
-            transform: translate(-50%, -50%);
-        }
-
-        & > span:nth-child(4) {
-            left: 0;
-            top: 100%;
-            transform: translate(-50%, -50%);
-        }
-
-        & > span:nth-child(5) {
-            left: 100%;
-            top: 100%;
-            transform: translate(-50%, -50%);
-        }
-        
-        & > span:nth-child(6) {
-            width: 300px;
-            left: 50%;
-            top: 100%;
-            transform: translate(-50%, -50%);
+    @include bp(desktop) {
+        .container {
+            width: 50%;
+    
+            & > span {
+                width: 200px;
+                height: 200px;
+                background-color: $login-color;
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.2;
+            }
+            
+            & > span:nth-child(1) {
+                left: 0;
+                top: 0;
+                transform: translate(-50%, -50%);
+            }
+    
+            & > span:nth-child(2) {
+                left: 100%;
+                top: 0%;
+                transform: translate(-50%, -50%);
+            }
+            
+            & > span:nth-child(3) {
+                width: 300px;
+                left: 50%;
+                top: 0%;
+                transform: translate(-50%, -50%);
+            }
+    
+            & > span:nth-child(4) {
+                left: 0;
+                top: 100%;
+                transform: translate(-50%, -50%);
+            }
+    
+            & > span:nth-child(5) {
+                left: 100%;
+                top: 100%;
+                transform: translate(-50%, -50%);
+            }
+            
+            & > span:nth-child(6) {
+                width: 300px;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 

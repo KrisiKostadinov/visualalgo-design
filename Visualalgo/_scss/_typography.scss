@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Alata|Calistoga&display=swap');
 
 html {
-    font: 12px/1.4 var(--font-family-text);
+    font: 16px/1.4 var(--font-family-text);
     scroll-behavior: smooth;
     @include bp(desktop) {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     @include bp(mobile) {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     @include bp(phone) {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
+    padding: 1em;
 }
 
 h1 { font-size: 2.4em; }
@@ -29,7 +30,7 @@ h6 { font-size: 1em; }
 
 input, label, button, p, a, ol, ul, textarea {
     padding: 1em 0;
-    font-size: inherit;
+    font: inherit;
 }
 
 blockquote, ul, ol {
@@ -56,6 +57,11 @@ main {
 
 blockquote p {
     font-style: italic;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 @keyframes show-in-main {
