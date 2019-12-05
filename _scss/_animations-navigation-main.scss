@@ -1,6 +1,9 @@
 nav.navbar {
     animation: ul-show 1s forwards;
-    animation-delay: 1s;
+    
+    @include bp(desktop) {
+        animation-delay: 1s;
+    }
 }
 
 nav.navbar ul li {
