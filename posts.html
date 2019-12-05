@@ -11,8 +11,8 @@ order: 2
             <a href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
             <div class="main-post">
                 {% if post.imgurl %}
-                <a href="{{ post.url }}">
-                    <img src="{{ post.imgurl}}" alt="">
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <img src="{{ site.baseurl }}{{ post.imgurl}}" alt="">
                 </a>
                 {% else %}
                     <h4>No photo</h4>
@@ -25,7 +25,7 @@ order: 2
             </div>
             <div class="footer-post">
                 <p><i class="fas fa-calendar-alt"></i> {{ post.posted-on}}</p>
-                <a href="{{ post.url }}">Read More...</a>
+                <a href="{{ site.baseurl }}{{ post.url }}">Read More...</a>
             </div>
         </article>
     {% endfor %}
