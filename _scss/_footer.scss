@@ -20,160 +20,175 @@ footer {
         padding-bottom: 0.7em;
     }
 
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        grid-gap: 4em;
-        border-bottom: 2px solid;
-        padding: 2em;
-        padding-bottom: 2.7em;
+    & > p {
+        text-align: center;
+    }
+}
+
+footer .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 4em;
+    border-bottom: 2px solid;
+    padding: 2em;
+    padding-bottom: 2.7em;
+
+    @include bp(mobile) {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    p {
+        color: $content-color;
 
         @include bp(mobile) {
-            grid-template-columns: repeat(2, auto);
+            text-align: center;
         }
-        
-        @include bp(phone) {
-            grid-template-columns: auto;
-        }
+    }
 
-        p {
-            color: $content-color;
-        }
+    section:first-child {
+        display: grid;
+        grid-template-rows: repeat(3, 30%);
+        grid-gap: 1em;
+    }
 
-        section:first-child {
-            display: grid;
-            grid-template-rows: repeat(3, 30%);
-            grid-gap: 1em;
+    section:first-child article:first-child {
+        h4 {
+            padding: 0;
 
-            article:first-child {
-                h4 {
-                    padding: 0;
-                }
-            }
-    
-            article:not(:first-child) {
-                h4 {
-                    color: $headings-color;
-                }
-            }
-
-            article:nth-child(3) {
-                ul {
-                    padding: 0;
-
-                    li {
-                        i {
-                            color: $headings-color;
-                            padding-right: 2em;
-                        }
-                    }
-                }
-            }
-        }
-
-        section:not(:first-child) {
-            h4 {
-                color: $headings-color;
-            }
-
-            ul {
-                padding: 0;
-
-                li {
-                    transition: transform 0.2s ease-in-out;
-                    
-                    a {
-                        color: $content-color;
-                        transition: color 0.2s ease-in-out;
-                        outline: none;
-                        padding: 0;
-
-                        &:hover, &:focus {
-                            color: $headings-color;
-                        }
-                    }
-
-                    &:hover, &:focus {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-        }
-
-        section.social-links {
-            ul {
-                display: grid;
-                grid-template-rows: 30% -1fr;
-                grid-gap: 1em;
-
-                li {
-                    a {
-                        display: flex;
-                        align-items: center;    
-                        font-weight: bold;
-
-                        i {
-                            padding-right: 0.7em;
-                            font-size: 1.7em;
-                        }
-                    }
-                }
-            }
-        }
-
-        section.form {
-            .field {
-                display: flex;
-                position: relative;
-                margin-bottom: 1em;
-
-                i {
-                    position: absolute;
-                    top: 50%;
-                    left: 0.2em;
-                    transform: translateY(-50%);
-                    color: $text-light-color;
-                    display: block;
-                    font-size: 1.7em;
-                }
-
-                input[type="email"] {
-                    color: $text-light-color;
-                    width: 100%;
-                    padding: 0.7em;
-                    padding-left: 2.2em;
-                    outline: none;
-                    border-radius: 0.2em;
-                    border: none;
-                    background-color: $black-color;
-
-                    &::placeholder {
-                        color: $text-light-color;
-                    }
-                }
-            }
-
-            .field.submit {
-                input[type="submit"] {
-                    color: $text-light-color;
-                    background-color: $headings-color;
-                    border: none;
-                    padding: 0.7em;
-                    border-radius: 0.2em;
-                    cursor: pointer;
-                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-                    outline: none;
-                    
-                    &:hover, &:focus {
-                        color: $headings-color;
-                        background-color: transparent;
-                    }
-                }
+            @include bp(mobile) {
+                text-align: center;
             }
         }
     }
 
-    & > p {
-        text-align: center;
+    section:first-child article:not(:first-child) {
+        h4 {
+            color: $headings-color;
+
+            @include bp(mobile) {
+                text-align: center;
+            }
+        }
+    }
+
+    section:first-child article:nth-child(3) {
+        @include bp(mobile) {
+            text-align: center;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul li i {
+            color: $headings-color;
+            padding-right: 2em;
+        }
+    }
+
+    section:not(:first-child) {
+        
+        @include bp(mobile) {
+            text-align: center;
+
+            ul li {
+                margin: 0 auto;
+            }
+        }
+
+        h4 {
+            color: $headings-color;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul li {
+            transition: transform 0.2s ease-in-out;
+
+            &:hover, &:focus {
+                transform: scale(1.1);
+            }
+        }
+
+        li a {
+            color: $content-color;
+            transition: color 0.2s ease-in-out;
+            outline: none;
+            padding: 0;
+
+            &:hover, &:focus {
+                color: $headings-color;
+            }
+        }
+    }
+
+    section.social-links ul {
+        display: grid;
+        grid-template-rows: 30% -1fr;
+        grid-gap: 1em;
+
+        li a {
+            display: flex;
+            align-items: center;    
+            font-weight: bold;
+        }
+
+        li a i {
+            padding-right: 0.7em;
+            font-size: 1.7em;
+        }
+    }
+
+    section.form .field {
+        display: flex;
+        position: relative;
+        margin-bottom: 1em;
+    }
+
+    .field i {
+            position: absolute;
+            top: 50%;
+            left: 0.2em;
+            transform: translateY(-50%);
+            color: $text-light-color;
+            display: block;
+            font-size: 1.7em;
+        }
+
+        input[type="email"] {
+            color: $text-light-color;
+            width: 100%;
+            padding: 0.7em;
+            padding-left: 2.2em;
+            outline: none;
+            border-radius: 0.2em;
+            border: none;
+            background-color: $black-color;
+
+            &::placeholder {
+                color: $text-light-color;
+            }
+        }
+
+    .field.submit input[type="submit"] {
+        color: $text-light-color;
+        background-color: $headings-color;
+        border: none;
+        padding: 0.7em;
+        border-radius: 0.2em;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        outline: none;
+
+        @include bp(mobile) {
+            width: 100%;
+        }
+        
+        &:hover, &:focus {
+            color: $headings-color;
+            background-color: transparent;
+        }
     }
 }
