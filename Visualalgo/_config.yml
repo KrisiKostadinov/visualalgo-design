@@ -2,9 +2,10 @@ title: Visualalgo
 email: your-email@example.com
 description: ""
 destination: docs
-baseurl: ""
+baseurl: "/visualalgo-design"
 # baseurl: "/visualalgo-design"
 url: ""
+destination: docs
 twitter_username: jekyllrb
 github_username:  jekyll
 
