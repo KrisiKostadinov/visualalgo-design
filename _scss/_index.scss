@@ -1,4 +1,6 @@
 .news {
+    padding-bottom: 2em;
+    
     h2 {
         text-align: center;
         color: var(--black-bg-color);
@@ -11,64 +13,64 @@
         justify-content: center;
         margin: 0 auto;
     }
-    
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: calc(50% - 2em) 0 1;
-        margin: 1em;
-        border-radius: 1em;
-        box-shadow: 0 0 7px var(--gray-color);
-        transition: box-shadow 0.7s ease-in-out, transform 0.7s ease-out;
-        overflow: hidden;
+}
 
-        @include bp (mobile) {
-            flex-basis: calc(100% - 2em);
+.news article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: calc(50% - 2em) 0 1;
+    margin: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 7px var(--gray-color);
+    transition: box-shadow 0.7s ease-in-out, transform 0.7s ease-out;
+    overflow: hidden;
+
+    @include bp (mobile) {
+        flex-basis: calc(100% - 2em);
+    }
+
+    @include bp (desktop) {
+        &:hover {
+            box-shadow: 0 0 20px var(--gray-color);
+            transform: scale(1.1);
         }
 
-        @include bp (desktop) {
-            &:hover {
-                box-shadow: 0 0 20px var(--gray-color);
-                transform: scale(1.1);
-            }
+        &:hover > p {
+            color: var(--black-bg-color);
+        }
+    }
 
-            &:hover > p {
-                color: var(--black-bg-color);
-            }
+    a {
+        background-color: var(--dark-bg-color);
+        padding: 1em;
+        margin: 1em 0;
+        margin-bottom: 0;
+        display: block;
+        text-align: center;
+        color: var(--text-light-color);
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        transition: background-color 0.7s ease-in-out;
+        
+        &:hover {
+            background-color: transparent;
+            color: var(--dark-bg-color);
         }
 
-        a {
-            background-color: var(--dark-bg-color);
-            padding: 1em;
-            margin: 1em 0;
-            margin-bottom: 0;
-            display: block;
-            text-align: center;
-            color: var(--text-light-color);
-            border-bottom-right-radius: 1em;
-            border-bottom-left-radius: 1em;
-            transition: background-color 0.7s ease-in-out;
-            
-            &:hover {
-                background-color: transparent;
-                color: var(--dark-bg-color);
-            }
-
-            i {
-                margin-left: 1em;
-            }
+        i {
+            margin-left: 1em;
         }
+    }
 
-        p {
-            padding: 1em;
-            text-align: left;
-        }
+    p {
+        padding: 1em;
+        text-align: left;
+    }
 
-        p {
-            color: var(--gray-color);
-            transition: color 1s ease-in;
-        }
+    p {
+        color: var(--gray-color);
+        transition: color 1s ease-in;
     }
 }
 
@@ -96,66 +98,66 @@
             margin: 1em auto;
         }
     }
-    
-    .content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+}
 
-        @include bp (mobile) {
-            grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+.services .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+
+    @include bp (mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+
+    @include bp (phone) {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .fab {
+        font-size: 2em;
+        padding-right: 1em;
+        color: $index-bg-dark-color;
+    }
+
+    article {
+        margin: 2em 1em;
+        flex-basis: 30%;
+        color: $index-content-color;
+        background-color: $index-bg-box-color;
+        padding: 1em;
+        border-top-left-radius: 0.7em;
+        border-top-right-radius: 0.7em;
+        box-shadow: 0 0 7px $blog-post-box-shadow-hover-color;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+        h3 {
+            padding: 0;
+            font-size: 1.2em;
         }
 
-        @include bp (phone) {
-            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        i {
+            transition: color 0.2s ease-in-out;
+        }
+        
+        p {
+            text-align: left;
+            padding: 0;
         }
 
-        .fab {
-            font-size: 2em;
-            padding-right: 1em;
-            color: $index-bg-dark-color;
+        > p {
+            padding-top: 1em;
         }
 
-        article {
-            margin: 2em 1em;
-            flex-basis: 30%;
-            color: $index-content-color;
-            background-color: $index-bg-box-color;
-            padding: 1em;
-            border-top-left-radius: 0.7em;
-            border-top-right-radius: 0.7em;
-            box-shadow: 0 0 7px $blog-post-box-shadow-hover-color;
-            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-
-            h3 {
-                padding: 0;
-                font-size: 1.2em;
-            }
-
+        .box-content {
+            display: flex;
+        }
+        
+        &:hover {
+            color: $main-content-color;
+            background-color: transparent;
+            transform: scale(1.1);
+            
             i {
-                transition: color 0.2s ease-in-out;
-            }
-            
-            p {
-                text-align: left;
-                padding: 0;
-            }
-
-            > p {
-                padding-top: 1em;
-            }
-
-            .box-content {
-                display: flex;
-            }
-            
-            &:hover {
                 color: $main-content-color;
-                background-color: transparent;
-                transform: scale(1.1);
-                
-                i {
-                    color: $main-content-color;
-                }
             }
         }
     }

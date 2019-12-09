@@ -6,8 +6,8 @@ $dark-color: #222222;
 $black-color: #000000;
 
 footer {
-    background-color: var(--black-bg-color);
-    color: var(--text-light-color);
+    background-color: $dark-color;
+    color: $text-light-color;
     padding: 2em;
     padding-bottom: 0;
 
